@@ -76,21 +76,8 @@ SELECT * FROM gamedevs g1, gamedevs g2 WHERE g1.devname = g2.country;
 -- Aggregatfunktioner
 SELECT max(age) FROM friends;
 
+-- Ta bort rad
+DELETE FROM friends WHERE name = 'Erik';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Ändra på värde
+UPDATE friends SET name = 'Eirich' WHERE age = 30;
