@@ -1,4 +1,3 @@
-
 $ = bash
 > = psql
 
@@ -60,8 +59,8 @@ SELECT * FROM friends, gamedevs WHERE name = devname;
 SELECT name, age, country FROM friends, gamedevs WHERE name = devname;
 
 -- Kvalificerade namn (rekommenderat, kan ha samma namn i flera tabeller då)
-SELECT friends.name, friends.age, gamedevs.country 
-FROM friends, gamedevs 
+SELECT friends.name, friends.age, gamedevs.country
+FROM friends, gamedevs
 WHERE friends.name = gamedevs.devname;
 
 -- Inner join (ger samma resultat som ovan)
@@ -81,3 +80,6 @@ DELETE FROM friends WHERE name = 'Erik';
 
 -- Ändra på värde
 UPDATE friends SET name = 'Eirich' WHERE age = 30;
+
+-- Textsökning, hitta alla med namn som innehåller 'sson'
+SELECT * FROM friends WHERE strpos(name, 'sson') > 0;
