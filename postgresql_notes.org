@@ -1,5 +1,10 @@
+* Links
+** Give all permissions to user https://stackoverflow.com/questions/22483555/postgresql-give-all-permissions-to-a-user-on-a-postgresql-database
+* Various commands
 $ = bash
 > = psql
+
+$ sudo -u postgres createuser -s $USER
 
 $ createdb mydb
 $ psql mydb
